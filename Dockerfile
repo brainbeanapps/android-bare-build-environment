@@ -59,40 +59,40 @@ ENV ANDROID_NDK_ROOT="${ANDROID_NDK}"
 ENV ANDROID_NDK_HOME="${ANDROID_NDK}"
 ENV PATH="${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_NDK}:${PATH}"
 RUN mkdir -p /root/.android/ && touch /root/.android/repositories.cfg \
-    && wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk-tools.zip \
-    && unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} \
-    && rm android-sdk-tools.zip \
-    && (yes | sdkmanager --licenses) \
-    && sdkmanager \
-      "tools" \
-      "platform-tools" \
-      "patcher;v4" \
-      "extras;android;m2repository" \
-      "extras;google;m2repository" \
-      "extras;google;google_play_services" \
-      "extras;google;market_licensing" \
-      "extras;google;market_apk_expansion" \
-      "extras;google;instantapps" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta5" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta4" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta3" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta2" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta1" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha8" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha4" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta5" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta4" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta3" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta2" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta1" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha8" \
-      "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha4"
+  && wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk-tools.zip \
+  && unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} \
+  && rm android-sdk-tools.zip \
+  && (yes | sdkmanager --licenses) \
+  && sdkmanager \
+    "tools" \
+    "platform-tools" \
+    "patcher;v4" \
+    "extras;android;m2repository" \
+    "extras;google;m2repository" \
+    "extras;google;google_play_services" \
+    "extras;google;market_licensing" \
+    "extras;google;market_apk_expansion" \
+    "extras;google;instantapps" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta5" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta4" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta3" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta2" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta1" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha8" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha4" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta5" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta4" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta3" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta2" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta1" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha8" \
+    "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha4"
 
 # Switch to user
 USER user
