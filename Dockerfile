@@ -49,6 +49,10 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
+# Install Ruby dependencies
+RUN gem update --system \
+  && gem install bundler
+
 # Install Android SDK
 # NOTE: ANDROID_SDK_HOME should not be set in order to use user home directory
 ENV ANDROID_HOME /opt/android-sdk
