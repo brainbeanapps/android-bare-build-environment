@@ -58,10 +58,7 @@ RUN gem update --system \
 ENV ANDROID_HOME /opt/android-sdk
 ENV ANDROID_SDK="${ANDROID_HOME}"
 ENV ANDROID_SDK_ROOT="${ANDROID_HOME}"
-ENV ANDROID_NDK="${ANDROID_HOME}/ndk-bundle"
-ENV ANDROID_NDK_ROOT="${ANDROID_NDK}"
-ENV ANDROID_NDK_HOME="${ANDROID_NDK}"
-ENV PATH="${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_NDK}:${PATH}"
+ENV PATH="${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
 RUN mkdir -p /root/.android/ && touch /root/.android/repositories.cfg \
   && wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk-tools.zip \
   && unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} \
